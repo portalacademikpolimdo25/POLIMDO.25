@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Rencana Studi</title>
+    <link rel="stylesheet" href="style.css"> <!-- jika pakai CSS terpisah -->
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            color: rgb(17, 48, 203);
+        }
+        .container {
+            padding: 20px;
+        }
+
+        .back-button {
+  display: inline-block;
+  background-color: #3498db; /* warna biru */
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 50%; /* bikin bulat */
+  font-size: 20px;
+  width: 40px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+.card {
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: auto;
+  width: 400px;
+}
+.card-header {
+  background-color: #5f6c7b;
+  color: rgb(52, 0, 242);
+  padding: 10px 15px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.minimize-btn {
+  background-color: #46c3da;
+  border: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  color: rgb(247, 15, 15);
+  font-weight: bold;
+  cursor: default;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+thead {
+  background-color: #1f1f1f;
+  color: white;
+}
+th, td {
+  padding: 10px;
+  border: 1px solid #ffffff;
+  text-align: left;
+}
+.empty-message {
+  padding: 15px;
+  color: #1f1f1f;
+}
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+         <a href="dashboard.html" class="back-button">&#8592;</a>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+          Jadwal Kuliah
+          <button class="minimize-btn">−</button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Hari</th>
+              <th>Mata Kuliah</th>
+              <th>Selai</th>
+              <th>Dosen</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="4" class="empty-message">Kelas perkuliahan belum dibuat. Silakan menghubungi staf jurusan.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+</body>
+</html>

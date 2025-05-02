@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale-1.0">
+  <title>Dashboard</title>
+  <style>
+
+   
+    
+    
+
+    .navbar {
+      background: #007bff;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 20px;
+    }
+
+    .menu {
+  position: fixed;
+  top: 60px; /* beri jarak dari navbar */
+  left: 0;
+  width: 180px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu button {
+  width: 100%;
+  padding: 20px;
+  background-color: #8c8787;
+  text-align: left;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 300;
+  cursor: pointer;
+  transition: background-color 1s;
+}
+
+
+.navbar {
+  color: white;
+  padding: 15px;
+  font-size: 20px;
+}
+
+.content {
+  margin-left: 600px; /* menyesuaikan dengan lebar .menu */
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+body {
+  background-color: #d9eaf7; /* biru muda */
+}
+
+.welcome-box {
+  background-color: white;
+  padding: 50px;
+  margin: 100px auto;
+  width: 30%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  font-family: sans-serif;
+  line-height: 1.6;
+  position: absolute;
+  top: 20px;
+  left: 480px;
+}
+
+.foto-dashboard {
+            width: 200px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .foto-container {
+            text-align: center;
+            margin-top: 350px;
+          
+        }
+
+        .foto-caption {
+            margin-top: 1px;
+            margin-bottom: 1px;
+            font-size: 16px;
+            color: #333;
+        }
+
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+
+<div class="navbar">
+  Selamat Datang di portal academic Nabil Alamri
+</div>
+
+<div class="foto-container">
+  <img src="profil.jpg" alt="foto-profil" class="foto-dashboard">
+  <p class="foto-caption">NAMA : NABIL ALAMRI</p>
+  <p class="foto-caption">NIM : 24022010</p>
+  <p class="foto-caption">PRODI : TEKNIK KOMPUTER</p>
+</div>
+
+<div class="menu">
+  <a href="rencana.html"><button>RENCANA STUDI</button></a>
+  <a href="jadwal.html"><button>JADWAL</button></a>
+  <a href="hasil.html"><button>HASIL STUDI</button></a>
+  <a href="index.html"><button>Logout</button></a>
+</div>
+
+
+<div class="welcome-box">
+  <p>Selamat datang di Portal Akademik.</p>
+  <p>
+    Portal Akademik merupakan fasilitas yang
+     disediakan bagi civitas 
+    akademika untuk menerima informasi
+     dengan lebih cepat melalui internet.
+    Diharapkan civitas akademika mendapat 
+    manfaat dengan aplikasi ini. Selamat menikmati...
+  </p>
+</div>
+
+
+<div class="content" id="content">
+</div>
+
+<script>
+  function showContent(menu) {
+    let isi = "";
+    if (menu === "profil") {
+      isi = "Nama: Nabil alamri Contoh<br>NIM: 310506<br>Prodi: Teknik komputer";
+    } else if (menu === "jadwal") {
+      isi = "Senin - Matematika<br>Selasa - Pemrograman Web<br>Rabu - Jaringan Komputer";
+    } else if (menu === "Hasil studi") {
+      isi = "Matematika: A<br>Pemrograman Web: B+<br>Jaringan Komputer: A-";
+    }
+    document.getElementById("content").innerHTML = isi;
+  }
+
+  function logout() {
+    alert("Kamu telah logout.");
+    window.location.href = "index.html";
+  }
+</script>
+
+</body>
+</html>
